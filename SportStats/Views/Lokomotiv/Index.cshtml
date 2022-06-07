@@ -1,0 +1,95 @@
+﻿@model IEnumerable<SportStats.Models.Lokomotiv>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+     <thead>
+        <tr>
+            <th>
+                Стадион
+            </th>
+            <th>
+                Главный тренер
+            </th>
+            <th>
+                Домашних побед
+            </th>
+            <th>
+                Гостевых побед
+            </th>
+            <th>
+                Голы на своем поле
+            </th>
+            <th>
+                Голы на чужом поле
+            </th>
+            <th>
+                Желтые карточки - грубая игра
+            </th>
+            <th>
+               Желтые карточки - неспортивное поведение
+            </th>
+            <th>
+               Желтые карточки - срыв атаки
+            </th>
+            <th>
+               Желтые карточки - прочие 
+            </th>
+            <th>
+                Желтые карточки - всего
+            </th>
+            <th>
+                Красные карточки - всего
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stadium)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Head_Coach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Home_Win)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Guest_Win)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Home_Goals)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Guest_Goals)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YellowRoughPlay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YellowUnsportsmanlikeBehavior)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YellowDisruptionOfTheAttack)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yellow_Other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yellow_Cards)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Red_Cards)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Title">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Title">Details</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

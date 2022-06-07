@@ -1,0 +1,17 @@
+{
+    "name": "SportStats",
+    "short_name": "SportStatsPWA",
+    "description": "PWA application in ASP.NET Core.",
+    "icons": [
+      {
+        "src": "/img/android-chrome-192x192.png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/img/81GFOd48w7L.png",
+        "sizes": "512x512"
+      }
+    ],
+    "display": "standalone",
+    "start_url": "/"
+}
